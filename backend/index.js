@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken');
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://deepfake-detection-system-kklf.vercel.app/'], // Add your frontend URLs
+  origin: ['http://localhost:3000', 'https://deepfake-detection-system-kklf.vercel.app'], // Add your frontend URLs
   methods: ['GET', 'POST']
 }));
 
