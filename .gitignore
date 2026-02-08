@@ -1,0 +1,27 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Datasets & models
+data/
+models/
+
+# Logs
+*.log
+training_log.txt
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+
+venv/
+backend/uploads/
+data/
+models/
+*.log
