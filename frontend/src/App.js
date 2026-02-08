@@ -63,9 +63,11 @@ function App() {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("http://localhost:5050/api/infer", formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const backendUrl = process.env.REACT_APP_BACKEND_URL; // add this at the top of App function
+const res = await axios.post(`${backendUrl}/api/infer`, formData, {
+  headers: { "Content-Type": "multipart/form-data" },
+});
+
       setResult(res.data);
     } catch (err) {
       console.error(err);
@@ -103,9 +105,9 @@ function App() {
       <header className="header">
         <div className="logo">
           <div className="logo-icon">🎭</div>
-          <h1>DeepGuard</h1>
+          <h1>DeepFake Detection Platform</h1>
         </div>
-        <p className="tagline">AI-Powered Deepfake Detection</p>
+        <p className="tagline">ML-Powered Deepfake Detection System</p>
       </header>
 
       <main className="main-content">
